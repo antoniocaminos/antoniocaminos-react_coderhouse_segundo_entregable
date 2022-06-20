@@ -1,0 +1,45 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+h1{
+    font-size: 1.5rem;
+    color: yellow;
+    font-weight: bold;
+}
+.nav-item{
+    text-decoration: none;
+    margin: 1rem;
+    position: relative;
+    color: yellow;
+    }
+.nav-item:hover{
+    color: white;
+    font-weight: bold;
+    }
+a{
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+a:hover, a:focus {
+    background-size: 100% 2px;
+}
+nav.img{
+    width: 35px;
+    height: auto;
+}
+.cart{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: blue;
+}
