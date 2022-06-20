@@ -1,13 +1,11 @@
 import React from 'react'
-
-const itemListContainer = ({greeting,aspecie}) => {
-  return (
-
-    <div className='landing'>
-        <span className='spanGreeting'>{greeting}</span>
-        <span className='spanAge'>{age}</span>
-    </div>
+import "./styles.css"
+const ItemListContainer = ({greeting}) => {
+    return (
+        <div className='landing'>
+            <span>{greeting}</span>
+            <span> `Humano $ {"terricolax"}de la tierra!`</span>
+        </div>
         )
-
 }
-export default itemListContainer;
+export default ItemListContainer;

@@ -4,7 +4,7 @@ import './styles.css'
 const CartWidget = () => {
     return(
         <button>
-            <img src={shoppingCart} className="carIcon"alt='Cart icon'/>
+            <img src={shoppingCart} className="cart"alt='Cart icon'/>
         </button>
         
     );

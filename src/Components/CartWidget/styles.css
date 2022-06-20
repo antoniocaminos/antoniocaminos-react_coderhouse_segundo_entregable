@@ -11,6 +11,10 @@ nav.cart{
     position: absolute;
     top: 0;
 }
+.cart{
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
   @media (max-width: 768px) {
     .button {

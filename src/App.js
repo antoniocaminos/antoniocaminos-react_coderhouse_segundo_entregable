@@ -1,51 +1,13 @@
 import NavBar from './Components/NavBar/index.js';
-import "./App.css";/* 
-import Logo from '../src/Components/Logo/index.js'; */
+import "./App.css";
+import ItemListContainer from '.Components/ItenListContainer/index.js';
+
 function App(){
     return(
-        <div className='nav-bar'>
-        <NavBar />
-      </div>
+        <div>
+            <NavBar />
+            <itemListContainer greeting="hola humano!"/>
+        </div>
       );
     }
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
- */

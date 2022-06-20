@@ -37,9 +37,3 @@ nav.img{
     width: 35px;
     height: auto;
 }
-.cart{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: blue;
-}
