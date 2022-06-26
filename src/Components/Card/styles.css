@@ -1,0 +1,22 @@
+.btnCard{
+    border-radius: 50% 50% 0 0;
+    background-color: red;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+    font-weight: 500;
+}
+.btnCard:hover{
+    background-color: yellow;
+    color: black;
+        
+}
+span{
+    font-weight: 500;
+    color: white;
+}
+span:hover{
+    background-color: red;
+    font-weight: 500;
+    color: #000;
+}
