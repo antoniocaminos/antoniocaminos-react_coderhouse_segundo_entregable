@@ -6,6 +6,9 @@ import ItemListContainer from './Components/ItemListContainer';
 //import Ice from './Components/Pages/Ice/index.js';
 //import Pepsi from './Components/Pages/Pepsi/index.js';
 /*import Logo from '../src/Components/Logo/index.js'; */
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Card from './Components/Card';
+
 function App(){
     return(
         <div className='nav-bar'>
@@ -14,10 +17,12 @@ function App(){
               <ItemListContainer greeting="Hola Humano"/>
           </div>
           <div className='body'>
-            
+              <Card />  <p>hola coso</p>
           </div>
           
         </div>
+        
+        
       );  
     }
 export default App;
