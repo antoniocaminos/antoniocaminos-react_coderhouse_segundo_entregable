@@ -1,21 +1,13 @@
-import React, { useState } from 'react'
+//import React, { useState } from 'react'
 //import { useCard } from '../Hooks/useCard';
 import './styles.css';
-
+import { useCard } from '../Hooks/index.js'
           
 export const Card = () => {
-          const [amount, setAmount] = useState (0)
+/* empieza el hook */
+          const {count, amount} = useCard()
+
           
-          const stock = 11;
-          const limit = 0;
-          const count = (value) =>{
-                const result = amount+value
-            if (result < stock && result >= limit) {
-                setAmount(amount+value)
-                console.log(amount)
-              }
-              console.log(value)
-            };
               
   return (
       <section className='bg-info border'>
@@ -33,16 +25,3 @@ export const Card = () => {
 
 
 export default Card;
-/* const {count , amount} = useCard(stock)
-  const stock = 10;
-  const limit = 0; 
-  const [amount, setAmount] = useState (0)
-  
-  const count = (value) => {
-
-    const result = amount + value
-    if ( result <= stock && result >= limit) { /* cambiar el stok en para agregarlo al arr * /
-    setAmount(amount+value)
-    console.log(value)
-  }
-   */
