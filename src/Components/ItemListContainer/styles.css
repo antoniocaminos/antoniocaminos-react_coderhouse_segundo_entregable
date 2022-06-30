@@ -5,6 +5,7 @@
     height: calc(100vh - 60px);
     justify-content: center;
     width: 100%;
+    color: red;
 }
 .itemList {
     display: flex;

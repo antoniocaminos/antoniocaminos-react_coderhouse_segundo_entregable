@@ -13,10 +13,5 @@
 }
 span{
     font-weight: 500;
-    color: white;
-}
-span:hover{
-    background-color: red;
-    font-weight: 500;
-    color: #000;
+    color: black;
 }

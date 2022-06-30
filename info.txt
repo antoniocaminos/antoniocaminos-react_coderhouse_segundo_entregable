@@ -1,0 +1,34 @@
+/*
+mount
+update
+unmount
+
+mount   
+    -Constructor
+    -render
+    -componentDidMount
+
+update
+    -render
+    -componentDidMount
+
+unmount
+    -componentWillMount
+
+XHR - fetch
+http
+    Client-Client
+    Client-Server
+    Request-Response
+Request
+    -url
+    -version
+    -method: get, post, put, patch, delete
+    -headers
+    -body
+Reespose
+    -version
+    -status 200, 201, 302, 304, 400, 401, 404, 500, 501, 504
+    -headers
+    -body
+    */
