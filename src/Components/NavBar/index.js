@@ -20,6 +20,7 @@ const menuItems = [
 
 
 const NavBar = () => {
+    
     return(
         <div className='nav'>
             <Logo />

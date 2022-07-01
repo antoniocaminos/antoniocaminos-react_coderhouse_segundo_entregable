@@ -17,7 +17,7 @@ function App(){
               <ItemListContainer greeting="Hola Humano"/>
           </div>
           <div className='body'>
-              <Card />  <p>hola coso</p>
+              <Card />
           </div>
           
         </div>
