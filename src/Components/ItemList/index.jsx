@@ -1,15 +1,13 @@
 import React from 'react'
-import Item from '../Item/index.jsx'
+import Item from '../Item';
 
-const ItemList = (props) => {
-    const {productsList} = props
+
+const ItemList = ({productsList}) => {
+    
     return (
     <div>
         <h6>lista de productos</h6>
-        {console.log(productsList)}
-        
-        {productsList.map((products)=><Item />)}
-        
+        {productsList.map((products)=><Item key ={products.id} products={products}/>)}
     </div>
   )
 }
