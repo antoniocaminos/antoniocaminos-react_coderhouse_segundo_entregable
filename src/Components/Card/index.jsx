@@ -6,9 +6,6 @@ import { useCard } from '../Hooks/index.js'
 export const Card = () => {
 /* empieza el hook */
           const {count, amount} = useCard()
-
-          
-              
   return (
       <section className='bg-info border'>
         <h3 className='py-3 big white'>producto title</h3>
