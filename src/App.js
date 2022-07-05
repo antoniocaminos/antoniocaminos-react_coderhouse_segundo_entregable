@@ -1,6 +1,9 @@
 import "./App.css";
 import NavBar from './Components/NavBar/index.js';
 import ItemListContainer from './Components/ItemListContainer';
+//import { Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './Components/ItemDetailContainer';
 //import Item from './Components/Item/index.jsx';
 //import Burger from './Components/Pages/Burger/index.js';
 //import Fries from './Components/Fries/index.js';
@@ -15,17 +18,27 @@ function App(){
         <div className='nav-bar'>
               <NavBar />
           <div className='itemList'>
-            <div>
+            <div className="ItemListContainer">
               <ItemListContainer greeting="Hola Humano" />
           </div>
-          
+          <Routes>
+            <Route path="/category/:categoryId" element={<ItemListContainer/>} />
+
+            <Route path="/detail/:id" element={<ItemDetailContainer />} />
+            <Route path="/" element={<ItemListContainer/>} />
+            {/* <Route path="/cart" element={<Cart/>} /> */}
+
+          </Routes>
+          </div>
+          <div>
+              {/* <ItemDetailContainer /> */}
+          </div>
           <div className='body'>
               {/* <Card /> */}
           </div>
           
         </div>
         
-        </div>
       );  
     }
 export default App;

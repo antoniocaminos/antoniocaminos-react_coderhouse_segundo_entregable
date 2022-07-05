@@ -2,40 +2,43 @@ import React from 'react';
 import CartWidget from '../CartWidget';
 import Logo from '../Logo';
 import '../NavBar/styles.css';
-
-const menuItems = [
+import { Link } from 'react-router-dom';
+const categories = [
 {   id: 1,
-    label: "Burger",
+    label: "Comidas rápidas",
+    path: "/",
+    name: "/category/FastFood",
     },
 {   id: 2,
-    label: "Fries",
+    label: "Bebidas",
+    path: "/",
+    name: "/category/Drinks",
     },
 {   id: 2,
-    label: "Pepsi",
+    label: "Postres",
+    path: "/",
+    name: "Desserts",
     },
-{   id: 3,
-    label: "Ice Cream",
-    },    
+    
 ];
 
 
 const NavBar = () => {
     
     return(
-        <div className='nav'>
+        <div className="navbar">
             <Logo />
                 <h1 className="nav-logo">Big Burgers</h1>
-                    <div>
-                        {menuItems.map(item => (
-                            <a href="/" className='nav-item' key={item.id}>
-                                {item.label}
-                                 </a>
-                                                ))}
-                        <CartWidget />
-                    </div>
-            </div>
-            
-            );
-        }
-        
+                    <ul>
+                        {categories.map(category => (
+                            <Link /* className='nav-item' */ to={category.path}  key={category.id}>
+                             {category.name}
+                               </Link>
+                        ))}
+                    </ul>
+                    <CartWidget />
+        </div>
+    );
+};      
+         
 export default NavBar
