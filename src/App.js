@@ -22,7 +22,7 @@ function App(){
           <div className='body'>
               {/* <Card /> */}
           </div>
-          
+              
         </div>
         
         </div>

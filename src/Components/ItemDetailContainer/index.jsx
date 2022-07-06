@@ -1,33 +1,36 @@
-import React, {useState, useEffect} from "react";
-import { useParams} from "../../Moks/products";
-import { getProd } from '../../Moks/products';
-import ItemDetail from "../ItemDetail/ItemDetail";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { getProduct } from '../../Moks/products.js';
+import ItemDetail from '../ItemDetail/ItemDetail/index.jsx';
 
 
-const ItemDetailContainer = () =>{
+
+const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
-useEffect(()=>{
-  setLoading(true);
-  const URL = './src/Moks/products.json';
-  fetch(URL)
-  .then(res => res.json())
-  .catch((json)=>setProduct(json))
-  .finally(() => {
-    setLoading(false);
-  });
-} , [id]);
-return (
-  <div>
-    {loading ? (<h3>cargando...</h3>
-    ):(
-      <>
-        <ItemDetail product={product} />
-      </>
-    )}
-  </div>
-)
+  useEffect(()=>{
+    getProduct
+    .then((res)=> setProduct(res))
+    .catch((err)=> console.log(err))
+    .finally(()=> setLoading(false))
+  },[]);
+
+  return (
+    
+    <div>
+      {loading ? (
+        <h2>Cargando...</h2>
+      ) : (
+        <>
+          <div className="container">
+            <ItemDetail product={product}/>
+          </div>
+        </>
+      )}
+    </div>
+  )
 }
-export default ItemDetailContainer;
+
+export default ItemDetailContainer
