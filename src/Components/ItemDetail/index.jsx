@@ -1,4 +1,25 @@
 import React from 'react';
+import Item from '../Item';
+
+const ItemDetail = ({product}) => {
+  return (
+    <div>
+        <h3>{product.name}</h3>
+                <img src={product.img} alt={product.name} width="400" />
+                <h2>{product.description}</h2>
+                <h3>$ {product.price}</h3>
+                <img src="" alt="" />
+                {/* <h4>Stock: {product.stock}</h4>
+                <p>stock={product.stock} initial={1}</p> */}
+    </div>
+  )
+}
+export default ItemDetail
+
+
+
+
+/* import React from 'react';
 
 const ItemDetail = ({ product }) => {
     return (
@@ -15,4 +36,4 @@ const ItemDetail = ({ product }) => {
     );
 };
 
-export default ItemDetail;
+export default ItemDetail; */
