@@ -12,11 +12,11 @@ if (condicion){
 }else{
     reject(console.log("nando"))
     }
-}, 3000) 
+}, 4500) 
 })
 const product ={
     id: '33',
-    name : "bigBurger1",
+    name : "bigBurger",
     img : "https://imgbin.com/png/47RxwqvX/whopper-hamburger-cheeseburger-big-king-bacon-png",
     price: "200",
     category: "food",

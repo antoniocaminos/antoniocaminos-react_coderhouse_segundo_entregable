@@ -1,6 +1,7 @@
 import "./App.css";
 import NavBar from './Components/NavBar/index.js';
 import ItemListContainer from './Components/ItemListContainer';
+import ItemDetalContainer from "./Components/ItemDetailContainer";
 //import Item from './Components/Item/index.jsx';
 //import Burger from './Components/Pages/Burger/index.js';
 //import Fries from './Components/Fries/index.js';
@@ -21,6 +22,7 @@ function App(){
           
           <div className='body'>
               {/* <Card /> */}
+              <ItemDetalContainer />
           </div>
               
         </div>
