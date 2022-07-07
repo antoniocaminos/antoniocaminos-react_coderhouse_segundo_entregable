@@ -9,8 +9,7 @@ const ItemDetail = ({product}) => {
                 <h2>{product.description}</h2>
                 <h3>$ {product.price}</h3>
                 <img src="" alt="" />
-                {/* <h4>Stock: {product.stock}</h4>
-                <p>stock={product.stock} initial={1}</p> */}
+               
     </div>
   )
 }
