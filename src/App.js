@@ -10,8 +10,9 @@ import ItemDetailContainer from "./Components/ItemDetailContainer";
 /*import Logo from '../src/Components/Logo/index.js'; */
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Card from './Components/Card';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import Item from './Components/Item/index.jsx';
+/* Class Routing y Pre-entrega */
 function App(){
     return(
       <>     
@@ -19,9 +20,9 @@ function App(){
               <NavBar />
             <Routes>
               <Route path="/" element={<ItemListContainer greeting="Hola Humano"/>} />
-              <Route path="/category/:categoryId" element={<ItemDetailContainer />} />
-              <Route path="/card" element={<Card />} />
-
+              <Route path="/category/:categoryId" element={<ItemListContainer />} />
+              <Route path="/category/:id" element={<ItemDetailContainer />} />
+              <Route path="/Card" element={<Card />}/>
             </Routes>
         </BrowserRouter>        
       </>
