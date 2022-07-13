@@ -1,14 +1,12 @@
 import React from 'react';
-import Item from '../Item';
+//import Item from '../Item';
 
 const ItemDetail = ({product}) => {
   return (
     <div>
-        <h3>{product.name}</h3>
-                <img src={product.img} alt={product.name} width="400" />
-                <h2>{product.description}</h2>
-                <h3>$ {product.price}</h3>
-                {/* <img src="" alt="" /> */}
+        <p>ItemDetail</p>
+            {product.name}
+        
                
     </div>
   )
@@ -16,7 +14,10 @@ const ItemDetail = ({product}) => {
 export default ItemDetail
 
 
-
+/* {product.name}</h3>
+                <img src={product.img} alt={product.name} width="400" />
+                <h2>{product.description}</h2>
+                <h3>$ {product.price}</h3> */
 
 /* import React from 'react';
 

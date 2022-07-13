@@ -1,4 +1,4 @@
-/* import '../Moks/style.css'; */
+
 const products = [
     {id: '1', name: "burger", description: "es una hamburguesa", price: "200", img:'./img/foodburger.png' , stock: "25", category: "burger"},
     {id: "2", name: "fries", description: "son papas fritas", price: "100", img: '/img/foodfries.png', stock: "25", category: "fries"},
@@ -19,29 +19,22 @@ const products = [
         categoryId
         ? resolve(filterProd)
         : resolve(products)
-
-/* viejo */
-        /* if (condicion){
-            resolve(products)
-        }else{
-            reject(console.log("nando"))
-            }
-         */}, 4500) 
+}, 4500) 
         })
         
-        const product ={
+        /* const product ={
             id: '33',
             name : "bigBurger",
             img : "https://imgbin.com/png/47RxwqvX/whopper-hamburger-cheeseburger-big-king-bacon-png",
             price: "200",
             category: "food",
-            description: "es una hamburguesa grande",
-        };
+            description: "es una hamburguesa grande", 
+        };*/
          export const getProduct = (id)=> {
             new Promise ((resolve, reject) => {
             //let condition = true
-            const founded = product.find(
-            product => product.id === Number(id)
+            const founded = products.find(
+            product => products.id === id
             );
             setTimeout(()=>{
                 resolve(founded)

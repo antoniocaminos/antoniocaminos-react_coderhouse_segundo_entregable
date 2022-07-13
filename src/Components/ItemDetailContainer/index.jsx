@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ItemDetal from '../ItemDetail';
+import ItemDetail from '../ItemDetail';
 import { useParams } from 'react-router-dom';
-import { getData, getProduct } from '../../Moks/fakeApi';
+import { getProduct } from '../../Moks/fakeApi';
 
 
 
-const ItemDetalContainer = () => {
+const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -26,10 +26,10 @@ const ItemDetalContainer = () => {
       ):(
         <>
           <div>
-            <ItemDetal product={product.id} /> 
+            <ItemDetail product={product} /> 
           </div>
         </>
       )}
     </div>
   )};
-export default ItemDetalContainer
+export default ItemDetailContainer
