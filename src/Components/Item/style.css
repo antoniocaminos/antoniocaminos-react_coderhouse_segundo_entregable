@@ -1,0 +1,6 @@
+.avatar{
+    max-width: 80px;
+}
+.avatar:hover{
+    max-width: 95px;
+}

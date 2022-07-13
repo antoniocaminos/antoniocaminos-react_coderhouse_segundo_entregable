@@ -8,7 +8,7 @@ const ItemDetail = ({product}) => {
                 <img src={product.img} alt={product.name} width="400" />
                 <h2>{product.description}</h2>
                 <h3>$ {product.price}</h3>
-                <img src="" alt="" />
+                {/* <img src="" alt="" /> */}
                
     </div>
   )

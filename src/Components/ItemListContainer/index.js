@@ -3,7 +3,8 @@ import ItemList from "../ItemList";
 import { getData } from '../../Moks/fakeApi.js';
 import ItemDetail from "../ItemDetail/index.jsx";
 import { useParams } from "react-router-dom";
-
+import Cart from "../Cart";
+import Card from "../Card";
 const ItemListContainer = ({greeting}) => {
     const [productsList, setProductsList] = useState([])
     const [loading, setLoading] = useState(true)

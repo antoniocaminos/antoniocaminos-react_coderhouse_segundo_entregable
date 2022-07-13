@@ -1,12 +1,13 @@
+/* import '../Moks/style.css'; */
 const products = [
-    {id: '1', name: "burger", description: "es una hamburguesa", price: "200", img: "https://i.postimg.cc/sGm4gzNr/foodburger.png", stock: "25", category: "burger"},
-    {id: "2", name: "fries", description: "son papas fritas", price: "100", img: "https://i.postimg.cc/sGm4gzNr/foodfries.png", stock: "25", category: "fries"},
-    {id: "3", name: "soda", description: "es una pepsi", price: "100", img: "https://i.postimg.cc/KK3frdRP/foodpepsi.png",  stock: "25" , category: "drink"},
-    {id: "4", name: "ice", description: "es un helado", price: "90", img: "https://i.postimg.cc/RJ4TmhGd/foodice.png",  stock: "25" , category: "dessert"},
-    {id: '5', name: "burger_a", description: "es una hamburguesa", price: "200", img: "https://i.postimg.cc/sGm4gzNr/foodburger.png", stock: "25", category: "burger"},
-    {id: "6", name: "fries_a", description: "son papas fritas", price: "100", img: "https://i.postimg.cc/sGm4gzNr/foodfries.png", stock: "25", category: "fries"},
-    {id: "7", name: "soda_a", description: "es una pepsi", price: "100", img: "https://i.postimg.cc/KK3frdRP/foodpepsi.png",  stock: "25" , category: "drink"},
-    {id: "8", name: "ice_a", description: "es un helado", price: "90", img: "https://i.postimg.cc/RJ4TmhGd/foodice.png",  stock: "25" , category: "dessert"},
+    {id: '1', name: "burger", description: "es una hamburguesa", price: "200", img:'./img/foodburger.png' , stock: "25", category: "burger"},
+    {id: "2", name: "fries", description: "son papas fritas", price: "100", img: '/img/foodfries.png', stock: "25", category: "fries"},
+    {id: "3", name: "soda", description: "es una pepsi", price: "100", img: './img/foodpepsi.png',  stock: "25" , category: "drink"},
+    {id: "4", name: "ice", description: "es un helado", price: "90", img: './img/foodice.png',  stock: "25" , category: "dessert"},
+    {id: '5', name: "burger_a", description: "es una hamburguesa", price: "200", img: './img/foodburger.png', stock: "25", category: "burger"},
+    {id: "6", name: "fries_a", description: "son papas fritas", price: "100", img: './img/foodfries.png', stock: "25", category: "fries"},
+    {id: "7", name: "soda_a", description: "es una pepsi", price: "100", img: './img/foodpepsi.png',  stock: "25" , category: "drink"},
+    {id: "8", name: "ice_a", description: "es un helado", price: "90", img: './img/foodice.png',  stock: "25" , category: "dessert"},
     ]
         
         export const getData = (categoryId) => new Promise ((resolve, reject) => {

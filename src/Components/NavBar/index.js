@@ -31,13 +31,16 @@ const NavBar = () => {
         <div className='nav'>
         <Logo />
             <h1 className="nav-logo">Big Burgers</h1>
-                <ul>
+                
                     {menuItems.map(categoryId => (
-                        <Link to={categoryId.path} key={categoryId.id}>{categoryId.label}
+                        
+                        < li to={categoryId.path}> 
+                            <Link to={categoryId.path}>{categoryId.label}
                              </Link>
+                             </li>
                                             ))}
                     <CartWidget />
-                </ul>
+                
         </div>
             );
         }        
