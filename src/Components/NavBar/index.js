@@ -15,12 +15,12 @@ const menuItems = [
     path: "/category/fries",
     name: "Fries",
     },
-{   id: 2,
+{   id: 3,
     label: "Bebidas",
     path: "/category/drink",
     name: "Drink",
     },
-{   id: 3,
+{   id: 4,
     label: "Postres",
     path: "/category/dessert", 
     name: "Dessert",   
@@ -33,11 +33,9 @@ const NavBar = () => {
             <h1 className="nav-logo">Big Burgers</h1>
                 
                     {menuItems.map(categoryId => (
-                        
-                        < li to={categoryId.path}> 
-                            <Link to={categoryId.path}>{categoryId.label}
-                             </Link>
-                             </li>
+                            <li to={categoryId.path}>{categoryId.id}
+                            <Link to={categoryId.path}>{categoryId.label}</Link>
+                            </li>
                                             ))}
                     <CartWidget />
                 

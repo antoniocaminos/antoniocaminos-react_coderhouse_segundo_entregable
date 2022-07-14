@@ -8,14 +8,14 @@ import { getProduct } from '../../Moks/fakeApi';
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
-  const { id } = useParams();
+  const { detailId } = useParams();
    
   useEffect(() => {
-    getProduct(id)
+    getProduct(detailId)
     .then((res)=>setProduct(res))
     .catch((err)=>console.log(err))
     .finally(()=>setLoading(false))
-  }, [id]);
+  }, [detailId]);
 
   //console.log(product);
   console.log("ando");
@@ -26,7 +26,8 @@ const ItemDetailContainer = () => {
       ):(
         <>
           <div>
-            <ItemDetail product={product} /> 
+            <ItemDetail />
+
           </div>
         </>
       )}

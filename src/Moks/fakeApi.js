@@ -10,28 +10,19 @@ const products = [
     {id: "8", name: "ice_a", description: "es un helado", price: "90", img: './img/foodice.png',  stock: "25" , category: "dessert"},
     ]
         
-        export const getData = (categoryId) => new Promise ((resolve, reject) => {
+        export const getData = (categoryId) => {
+            return new Promise ((resolve, reject) => {
         const filterProd = products.filter(
             (prod) => prod.category === categoryId
             );
         //let condicion = true
         setTimeout(()=>{
-        categoryId
-        ? resolve(filterProd)
-        : resolve(products)
-}, 4500) 
+        categoryId ? resolve(filterProd) : resolve(products)
+    }, 4500) 
         })
-        
-        /* const product ={
-            id: '33',
-            name : "bigBurger",
-            img : "https://imgbin.com/png/47RxwqvX/whopper-hamburger-cheeseburger-big-king-bacon-png",
-            price: "200",
-            category: "food",
-            description: "es una hamburguesa grande", 
-        };*/
+    }
          export const getProduct = (id)=> {
-            new Promise ((resolve, reject) => {
+            return new Promise ((resolve, reject) => {
             //let condition = true
             const founded = products.find(
             product => products.id === id

@@ -12,7 +12,7 @@ import ItemDetailContainer from "./Components/ItemDetailContainer";
 import Card from './Components/Card';
 import Cart from './Components/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Item from './Components/Item/index.jsx';
+//import Item from './Components/Item/index.jsx';
 /* Class Routing y Pre-entrega */
 function App(){
     return(
