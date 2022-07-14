@@ -1,12 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Card from '../Card/index.jsx';
+import { useState } from 'react';
+
 
 const ItemDetail = ({product}) => {
+    const [goToBuy, setgoToBuy] = useState(false);
+
+    
+    const onAdd = (quantity) => {
+       setgoToBuy(true);
+    }
+
     return(
         <div className='detail'>
             <img src={product.img} alt={product.description} width = '400 px' />
             <h2>{product.name}</h2>
             <h3>$: {product.price}</h3>
             <h4>Stok: {product.stok}</h4>
+            {
+            goToBuy 
+                ?
+                <Link to='/Cart'>Terminar Compra</Link>   
+                :<Card onAdd={onAdd}/>
+
+            }
+
         </div>
     
   )

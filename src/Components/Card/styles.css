@@ -6,6 +6,9 @@
     color: white;
     font-weight: 500;
 }
+.btnBuy{
+    color: green
+}
 .btnCard:hover{
     background-color: yellow;
     color: black;

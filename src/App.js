@@ -1,19 +1,15 @@
 import "./App.css";
+import React from "react";
 import NavBar from './Components/NavBar/index.js';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from "./Components/ItemDetailContainer";
-//import Item from './Components/Item/index.jsx';
-//import Burger from './Components/Pages/Burger/index.js';
-//import Fries from './Components/Fries/index.js';
-//import Ice from './Components/Pages/Ice/index.js';
-//import Pepsi from './Components/Pages/Pepsi/index.js';
-/*import Logo from '../src/Components/Logo/index.js'; */
-//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Card from './Components/Card';
 import Cart from './Components/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-//import Item from './Components/Item/index.jsx';
-/* Class Routing y Pre-entrega */
+import { createContext } from "react";
+export const CartContext = React.createContext('');
+console.log('CartContext', CartContext);
+
 function App(){
     return(
       <>     
@@ -23,8 +19,8 @@ function App(){
               <Route path="/" element={<ItemListContainer greeting="Hola Humano"/>} />
               <Route path="/category/:categoryId" element={<ItemListContainer />} />
               <Route path="/detail/:detailId" element={<ItemDetailContainer />} />
-              <Route path="path/Cart" element={<Cart />} />
               <Route path="/path/Card:" element={<Card />}/>
+              <Route path="path/Cart" element={<Cart />} />
             </Routes>
         </BrowserRouter>        
       </>
