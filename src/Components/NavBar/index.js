@@ -30,10 +30,9 @@ const NavBar = () => {
     return(
         <div className='nav'>
         <Logo />
-            <h1 className="nav-logo">Big Burgers</h1>
-                
-                    {menuItems.map(categoryId => (
-                            <li to={categoryId.path}>{categoryId.id}
+            <h1 className="nav-logo">Big Burgers</h1>                
+                    {menuItems.map((categoryId) => (
+                            <li to={categoryId.path} key={categoryId.id}>
                             <Link to={categoryId.path}>{categoryId.label}</Link>
                             </li>
                                             ))}

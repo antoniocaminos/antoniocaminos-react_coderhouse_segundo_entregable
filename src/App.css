@@ -1,9 +1,5 @@
-*{
-  margin: 0;
+*{margin: 0;
   padding: 0;
-}
-img{
-  max-width: 10px;
 }
 .landing{
   align-items: center;

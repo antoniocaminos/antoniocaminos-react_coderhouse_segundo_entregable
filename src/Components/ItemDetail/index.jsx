@@ -1,25 +1,15 @@
 import React from 'react';
-import Item from '../Item';
-
 
 const ItemDetail = ({product}) => {
     return(
-        <>
-        <p>detalle cargado, dibujar
-        </p>
-        </>
-
-
-       /*  <div className="detail">
-        <img src={img} alt={title}/>
-            <h1>{product.name}</h1>
-            <h2>{product.description}</h2>
-            <h3>$ {product.price}</h3>
-            <h4>Stock: {product.stock}</h4>
-            <p>stock={product.stock} initial={1}</p>
+        <div className='detail'>
+            <img src={product.img} alt={product.description} width = '400 px' />
+            <h2>{product.name}</h2>
+            <h3>$: {product.price}</h3>
+            <h4>Stok: {product.stok}</h4>
         </div>
- */
-    )
+    
+  )
 }
 export default ItemDetail
 
