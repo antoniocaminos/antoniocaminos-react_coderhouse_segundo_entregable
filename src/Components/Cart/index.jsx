@@ -1,9 +1,9 @@
 import React from 'react'
-
+import 'react-router-dom';
 const Cart = () => {
   return (
     <div>
-        <p>soy el cart</p>
+        <h2>hola soy el cart</h2>
     </div>
   )
 }

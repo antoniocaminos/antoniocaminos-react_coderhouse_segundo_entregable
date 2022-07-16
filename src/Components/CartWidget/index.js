@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import shoppingCart from '../../assets/shoppingCart.png';
 import './styles.css'
+import { CartContext } from '../../App';
 const CartWidget = () => {
+const contex = useContext(CartContext);
+console.log('aca viene el context', contex);
     return(
         <button>
             <img src={shoppingCart} className="cart"alt='Cart icon'/>

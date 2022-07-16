@@ -8,22 +8,24 @@ import Cart from './Components/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import { createContext } from "react";
 
-export const CartContext = React.createContext('');
-console.log('CartContext', CartContext);
+export const CartContext = React.createContext([]);
+console.log('aca viene el context', CartContext);
 console.log('mostro')
 
 function App(){
     return(
       <>     
         <BrowserRouter>
-              <NavBar />
+            <NavBar />
+            <CartContext.Provider value="value">
             <Routes>
               <Route path="/" element={<ItemListContainer greeting="Hola Humano"/>} />
               <Route path="/category/:categoryId" element={<ItemListContainer />} />
               <Route path="/detail/:detailId" element={<ItemDetailContainer />} />
               <Route path="/path/Card:" element={<Card />}/>
-              <Route path="path/Cart" element={<Cart />} />
+              <Route path="/Cart" element={<Cart />} />
             </Routes>
+            </CartContext.Provider>
         </BrowserRouter>        
       </>
  
