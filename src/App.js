@@ -6,9 +6,11 @@ import ItemDetailContainer from "./Components/ItemDetailContainer";
 import Card from './Components/Card';
 import Cart from './Components/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { createContext } from "react";
+//import { createContext } from "react";
+
 export const CartContext = React.createContext('');
 console.log('CartContext', CartContext);
+console.log('mostro')
 
 function App(){
     return(

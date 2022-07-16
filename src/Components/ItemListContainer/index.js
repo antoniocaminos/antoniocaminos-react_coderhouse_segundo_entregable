@@ -5,6 +5,11 @@ import { getData } from '../../Moks/fakeApi.js';
 import { useParams } from "react-router-dom";
 //import Cart from "../Cart";
 //import Card from "../Card";
+//import { db } from "../../firebase/firebase";
+//import { getDocs, collection, query } from "../../firebase/firestore";
+
+
+
 const ItemListContainer = ({greeting}) => {
     const [productsList, setProductsList] = useState([])
     const [loading, setLoading] = useState(true)
@@ -16,6 +21,9 @@ const ItemListContainer = ({greeting}) => {
 
 
     useEffect(()=>{
+       
+
+
         getData(categoryId)
         .then((res)=> setProductsList(res))
         .catch((err)=> console.log(err))
