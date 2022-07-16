@@ -8,7 +8,7 @@ const ItemDetail = ({product}) => {
     const [goToBuy, setgoToBuy] = useState(false);
 
     
-    const onAdd = (quantity) => {
+    const onAdd = (addTo) => {
        setgoToBuy(true);
     }
 
@@ -22,7 +22,7 @@ const ItemDetail = ({product}) => {
             goToBuy 
                 ?
                 <Link to='/Cart'>Terminar Compra</Link>   
-                :<Card onAdd={onAdd}/>
+                :<Card onAdd={onAdd} />
 
             }
 
