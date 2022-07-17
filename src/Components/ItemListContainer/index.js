@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
 import ItemList from "../ItemList";
 import { getData } from '../../Moks/fakeApi.js';
-//import ItemDetail from "../ItemDetail/index.jsx";
 import { useParams } from "react-router-dom";
-//import Cart from "../Cart";
-//import Card from "../Card";
-//import { db } from "../../firebase/firebase";
-//import { getDocs, collection, query } from "../../firebase/firestore";
-
-
+import { db } from "firebase/firestore";
+import { getDocs, collection, query }  from "firebase/firestore";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ItemListContainer = ({greeting}) => {
     const [productsList, setProductsList] = useState([])
@@ -18,24 +14,21 @@ const ItemListContainer = ({greeting}) => {
     const { categoryId } = param;
     //console.log("aca va al categoryId");
     console.log(param);
-
+    
+    
 
     useEffect(()=>{
-       
-
-
         getData(categoryId)
         .then((res)=> setProductsList(res))
         .catch((err)=> console.log(err))
         .finally(()=> setLoading(false))
     },[categoryId]);
- //console.log(getData)
+
 
 return (
         <div className="landing">
             <span>{greeting}</span>
-            {loading ? <p>Cargando...</p> : <ItemList productsList={productsList}/>}
-            {/* {<ItemList productsList={productsList}/>} */}
+            {loading ? <p>Cargando...</p> : <ItemList productsList={productsList}/>} 
         </div> 
 )
     
