@@ -14,9 +14,6 @@ const ItemListContainer = ({greeting}) => {
     const { categoryId } = param;
     //console.log("aca va al categoryId");
     console.log(param);
-    
-    
-
     useEffect(()=>{
         getData(categoryId)
         .then((res)=> setProductsList(res))
@@ -29,6 +26,7 @@ return (
         <div className="landing">
             <span>{greeting}</span>
             {loading ? <p>Cargando...</p> : <ItemList productsList={productsList}/>} 
+            
         </div> 
 )
     

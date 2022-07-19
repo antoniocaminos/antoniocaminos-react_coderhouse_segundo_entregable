@@ -1,15 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-//import ItemDetail from '../ItemDetail'
 import { CartContext } from '../../App'
 import './style.css'
 
 const Item = ({products}) => {
   const value = useContext(CartContext);
-  console.log("empieza contexto");
-  console.log('value', value);
-  console.log("termino contexto");
-  //console.log(products)
+  const yo = useContext(CartContext);
+  console.log(yo)
   const {name, description, price, img, stock} = products
   return (
     <div className='card' style={{width:'20rem',margin:'.5rem'}}>

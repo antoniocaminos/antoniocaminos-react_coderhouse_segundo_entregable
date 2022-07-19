@@ -4,7 +4,7 @@ import './styles.css'
 import { CartContext } from '../../App';
 const CartWidget = () => {
 const contex = useContext(CartContext);
-console.log('aca viene el context', contex);
+console.log('cartWichget' , contex);
     return(
         <button>
             <img src={shoppingCart} className="cart"alt='Cart icon'/>
